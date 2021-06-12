@@ -14,9 +14,17 @@ npm install dynamic-resolve
 
 ## Usage
 
-- import the one and only function in this package `resolveFile`
+- import the one and only class in this package `ResolveFile`
 
-`resolveFile` expects two arguments.
+`ResolveFile` has two static methods in it.
 
-- **pathTo** Path in which the program should search for the file
-- **File** File to search for
+- **search** Will Search for the file path inside the entire path
+- **getData** will get the data of the path from the **search** results
+
+```js
+ResolveFile.search("node_modules/swudo", ".yarn_integrity");
+//  This will find yarn integrity file node_modules as it searchs the entire one
+
+ResolveFile.getData("node_modules/swudo", ".yarn_integrity");
+// Gets the data inside the file
+```
