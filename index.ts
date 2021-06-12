@@ -8,32 +8,26 @@ import fs = require("fs");
  * @return {void}
  */
 function resolveFile(pathTo: string, file: string): string {
-    let parsed: string = "";
+    // Reducing call stack count
     pathTo = path.resolve(pathTo);
 
-    const availablePaths: string[] = pathTo.split("\\") || pathTo.split("/");
+    const startPath = path.join(pathTo, file);
+    const exists = fs.existsSync(startPath);
 
-    for (let i = 0; i < availablePaths.length; i++) {
-        availablePaths.pop();
-        availablePaths.join("");
+    if (!exists) {
+        const nextPath = pathTo.split("\\" || "/")
 
-        const activePath: string = path.join(...availablePaths);
+        nextPath.pop();
 
-        availablePaths.pop();
+        let _nextPath = nextPath.join("\\" || "/");
 
-
-        try {
-            const fileA: string = fs.readFileSync(path.join(activePath, file)).toString();
-
-            parsed = fileA;
-
-            return parsed;
-        } catch (e) {
-            return resolveFile(activePath, file);
-        }
+        resolveFile(_nextPath, file);
+    } else {
+        console.log("Here is the path:", startPath);
+        return startPath;
     }
 
-    return parsed;
+    return startPath;
 };
 
 export default resolveFile;

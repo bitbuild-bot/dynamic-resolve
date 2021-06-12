@@ -9,7 +9,7 @@
   "private": false,
   "scripts": {
     "build": "tsc",
-    "test": "tsc && node test.js"
+    "test": "tsc && node dist/test.js"
   },
   "dependencies": {
     "swudo": "^0.2.3"
