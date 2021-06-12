@@ -1,9 +1,9 @@
 {
-  "name": "resolve-file",
+  "name": "dynamic-resolve",
   "version": "1.0.0",
   "description": "Resolves a file dynamically through all the specified path",
   "main": "index.js",
-  "repository": "https://github.com/swudots/resolve-file.git",
+  "repository": "https://github.com/swudots/dynamic-resolve.git",
   "author": "Haneen Mahdin <haneenmahdin@gmail.com>",
   "license": "MIT",
   "private": false,
