@@ -1,3 +1,4 @@
-import resolveFile from ".";
+import ResolveFile from ".";
 
-resolveFile("node_modules/", "yarn.lock");
+console.log("Search results");
+ResolveFile.search('node_modules', 'package.json');
