@@ -7,6 +7,9 @@
   "author": "Haneen Mahdin <haneenmahdin@gmail.com>",
   "license": "MIT",
   "private": false,
+  "files": [
+    "dist/index.js"
+  ],
   "scripts": {
     "build": "tsc",
     "test": "tsc && node dist/test.js"
