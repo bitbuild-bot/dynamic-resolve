@@ -22,7 +22,7 @@ npm install dynamic-resolve
 
 ```js
 ResolveFile.search("node_modules/swudo", ".yarn_integrity");
-//  This will find yarn integrity file node_modules as it searchs the entire one
+//  This will find yarn integrity file in node_modules as it searchs the entire one
 ```
 
 ## How it works
