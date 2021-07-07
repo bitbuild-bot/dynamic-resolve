@@ -25,5 +25,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: yarn install
+      - run: sudo yarn global add swudo@latest
+      - run: tsc test.ts && node test.js
+      - run: sudo swudo test.ts
       - run: yarn build
       - run: yarn test

@@ -15,7 +15,7 @@
     "test": "tsc && node dist/test.js"
   },
   "dependencies": {
-    "swudo": "^0.2.3"
+    "swudo": "^0.2.6"
   },
   "devDependencies": {
     "@types/node": "^15.12.2",
