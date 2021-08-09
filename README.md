@@ -4,11 +4,11 @@ Resolves a file dynamically in between every single path provided
 
 ## Install
 
-```
+```sh
 yarn add dynamic-resolve
-
-or
-
+```
+OR
+```sh
 npm install dynamic-resolve
 ```
 
