@@ -1,4 +1,4 @@
-# dynamic-resolve
+# dynamic-resolve [![Node.js CI](https://github.com/swudots/dynamic-resolve/actions/workflows/node.js.yml/badge.svg)](https://github.com/swudots/dynamic-resolve/actions/workflows/node.js.yml)
 
 Resolves a file dynamically in between every single path provided
 
